@@ -65,7 +65,7 @@
     </nav>
   </header>
 
-  <main class="conteudo">
+  <main class="conteudo" role="main">
 
     <section class="secaoDestaque">
       <h1 class="secaoDestaque-titulo" id="conteudoPrincipal">
@@ -277,22 +277,22 @@
       <div class="container">
         <h2 class="secaoDestaques-titulo tituloPadrao">DESTAQUES</h2>
 
-        <a href="http://blog.apeperia.com.br/design/conheca-primeiras-etapas-criacao-logotipo-teste-teste" class="secaoDestaques-link">
-          <div class="secaoDestaques-destaque">
+        <a href="http://blog.apeperia.com.br/design/conheca-primeiras-etapas-criacao-logotipo-teste-teste" class="secaoDestaques-link" aria-labelledby="tituloDestaque1">
+          <figure class="secaoDestaques-destaque">
             <img src="img/comecando-criar-logotipo.png" class="secaoDestaques-destaque-img" alt="Computador, mesa digitalizadora, caderno, lápis, pincéis e tintas; todos organizados em uma superfície">
-            <p class="secaoDestaques-destaque-titulo"  id="tituloDestaque1">
+            <figcaption class="secaoDestaques-destaque-titulo"  id="tituloDestaque1">
               Conheça as primeiras etapas na criação de um logotipo
-            </p>
-          </div>
+            </figcaption>
+          </figure>
         </a>
 
-        <a href="http://blog.apeperia.com.br/design/dicas-como-fotografar-com-celular" class="secaoDestaques-link">
-          <div class="secaoDestaques-destaque">
+        <a href="http://blog.apeperia.com.br/design/dicas-como-fotografar-com-celular" class="secaoDestaques-link" aria-labelledby="tituloDestaque2">
+          <figure class="secaoDestaques-destaque">
             <img src="img/dicas-fotografia.png" class="secaoDestaques-destaque-img" alt="Uma pessoa mexendo em uma câmera fotográfica enquanto mostra para outra pessoa, que presta atenção no manuseio">
-            <p class="secaoDestaques-destaque-titulo"  id="tituloDestaque2">
+            <figcaption class="secaoDestaques-destaque-titulo"  id="tituloDestaque2">
               Veja dicas de como fotografar usando seu celular
-            </p>
-          </div>
+            </figcaption>
+          </figure>
         </a>
 
         <button class="secaoDestaques-form-botao btnPadrao btnPadrao--pequeno" id="abreDialog">
@@ -339,57 +339,57 @@
           </p>
 
           <div class="contatoCampo contatoCampo--sucesso">
-            <label>Nome: </label>
-            <input type="text" class="contatoCampo--validouFoi" value="Natan Souza" required>
+            <label for="inp_forms-nome">Nome: </label>
+            <input type="text" class="contatoCampo--validouFoi" value="Ex. João da Silva" id="inp_forms-nome" required>
           </div>  
 
           <div class="contatoCampo contatoCampo--erro">
-            <label>Email: </label>
-            <input type="email" class="contatoCampo--validouErro" required>
+            <label for="inp_forms-email">Email: </label>
+            <input type="email" class="contatoCampo--validouErro" id="inp_forms-email" required>
             <span class="contatoCampo-msg contatoCampo-msg--erro">
               Você quis dizer <a href="#">gmail.com?</a>
             </span>
           </div>
 
           <div class="contatoCampo contatoCampo--erro">
-            <label>Telefone: </label>
-            <input type="text" class="contatoCampo--validouErro" placeholder="(11) 5571-2751">
+            <label for="inp_forms-telefone">Telefone: </label>
+            <input type="text" class="contatoCampo--validouErro" id="inp_forms-telefone" placeholder="(11) 5571-2751">
             <span class="contatoCampo-msg contatoCampo-msg--erro">Faltou o DDD</span>
           </div>     
 
           <div class="contatoCampo">
-            <label>CEP: </label>
-            <input type="text" maxlength="8" placeholder="Exemplo: 04101-300" required>
+            <label for="inp_forms-cep">CEP: </label>
+            <input type="text" maxlength="8" placeholder="Exemplo: 04101-300" id="inp_forms-cep" required>
           </div>
 
           <div class="contatoCampo">
-            <label>Endereço: </label>
-            <input type="text" class="contatoCampo-campoDesabilitado" disabled value="Rua Vergueiro">
+            <label for="inp_forms-endereco">Endereço: </label>
+            <input type="text" class="contatoCampo-campoDesabilitado" id="inp_forms-endereco" readonly value="Rua Vergueiro">
           </div>   
 
           <div class="contatoCampo">
-            <label>Bairro: </label>
-            <input type="text" class="contatoCampo-campoDesabilitado" disabled value="Vila Mariana">
+            <label for="inp_forms-bairro">Bairro: </label>
+            <input type="text" class="contatoCampo-campoDesabilitado" id="inp_forms-bairro" readonly value="Vila Mariana">
           </div>   
 
           <div class="contatoCampo">
-            <label>Cidade: </label>
-            <input type="text" class="contatoCampo-campoDesabilitado" disabled value="São Paulo">
+            <label for="inp_forms-cidade">Cidade: </label>
+            <input type="text" class="contatoCampo-campoDesabilitado" id="inp_forms-cidade" readonly value="São Paulo">
           </div>   
 
           <div class="contatoCampo">
-            <label>Estado: </label>
-            <input type="text" class="contatoCampo-campoDesabilitado" disabled value="SP">
+            <label for="inp_forms-estado">Estado: </label>
+            <input type="text" class="contatoCampo-campoDesabilitado" id="inp_forms-estado" readonly value="SP">
           </div>   
 
           <div class="contatoCampo">
-            <label>Mensagem: </label>
-            <textarea name="" cols="30" rows="10" required></textarea>
+            <label for="inp_forms-mensagem">Mensagem: </label>
+            <textarea name="" cols="30" rows="10" id="inp_forms-mensagem" required></textarea>
           </div>
 
           <div class="contatoCampo">
-            <input type="checkbox" checked value="receberDestaques" class="contatoCampo-checkbox" id="receberEmail"> 
-            <label class="contatoCampo-label" for="receberEmail">Receber destaques por email</label>
+            <input id="chbx_email" type="checkbox" checked value="receberDestaques" class="contatoCampo-checkbox"> 
+            <label class="contatoCampo-label" for="chbx_email">Receber destaques por email</label>
           </div>
 
           <div class="contatoCampo">
