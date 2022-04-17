@@ -23,12 +23,12 @@
 }
 
 .secaoContato-form-cta {
-  width: 100%;
-  margin-top: 1em;
-  display: block;
   background: transparent;
-  color: #B72E2E;
   border: 1px solid #B72E2E;
+  color: #B72E2E;
+  display: block;
+  margin-top: 1em;
+  width: 100%;
 }
 
 .secaoContato-form-cta:hover,

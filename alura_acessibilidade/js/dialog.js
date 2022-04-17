@@ -4,7 +4,7 @@ var dialog = document.querySelector('.dialogNewsletter');
 var dialogBody = document.querySelector('.dialogNewsletter-body');
 var dialogOverlay = document.querySelector('.dialogNewsletter-overlay');
 var dialogInert = document.querySelector('#conteudoForaDialog');
-var video = document.querySelector('.video');
+var video = document.querySelector('.secaoInstitucional-video');
 
 btnAbreDialog.style.display = 'block';
 

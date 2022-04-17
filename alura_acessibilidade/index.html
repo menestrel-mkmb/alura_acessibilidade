@@ -201,10 +201,11 @@
         <h2 class="secaoBlog-titulo tituloPadrao">
           BLOG
         </h2>
+        <h3 id="tituloBlog" class="escondeVisualmente">Lista de artigos</h3>
 
-        <ul class="listaDeArtigos">
+        <ol class="listaDeArtigos" aria-labelledby="tituloBlog">
 
-          <li id="new0" class="listaDeArtigos-item">
+          <li id="new0" class="listaDeArtigos-item" data-sliderItem="0" data-noticia="0">
             <article class="listaDeArtigos-artigo">
               <img src="img/10-aplicativos-mais-baixados.png" class="listaDeArtigos-artigo-img" alt>
               <h3 class="listaDeArtigos-artigo-titulo">
@@ -219,7 +220,7 @@
             </article>
           </li>
 
-          <li id="new1" class="listaDeArtigos-item">
+          <li id="new1" class="listaDeArtigos-item" data-sliderItem="1" data-noticia="1">
             <article class="listaDeArtigos-artigo">
               <img src="img/ux-usabilidade.jpg" class="listaDeArtigos-artigo-img" alt>
               <h3 class="listaDeArtigos-artigo-titulo">
@@ -234,7 +235,7 @@
             </article>
           </li>
 
-          <li id="new2" class="listaDeArtigos-item">
+          <li id="new2" class="listaDeArtigos-item" data-sliderItem="2" data-noticia="2">
             <article class="listaDeArtigos-artigo">
               <img src="img/dicas-acessibilidade.jpg" class="listaDeArtigos-artigo-img" alt>
               <h3 class="listaDeArtigos-artigo-titulo">
@@ -249,12 +250,12 @@
             </article>
           </li>
 
-        </ul>
+        </ol>
 
         <nav>
           <ul class="listaDeArtigos-slider">
             <li>
-              <a href="#new0" data-sliderItem="0" class="listaDeArtigos-slider-item listaDeArtigos-slider-item--ativo">
+              <a href="#new0" data-sliderItem="0" class="listaDeArtigos-slider-item">
                 Notícia 1
               </a>
             </li>
@@ -263,7 +264,7 @@
                 Notícia 2
               </a>
             </li>
-            <li>
+            <li data-noticia="2">
               <a href="#new2" data-sliderItem="2" class="listaDeArtigos-slider-item">
                 Notícia 3
               </a>
@@ -310,75 +311,75 @@
           </h2>
 
           <form class="secaoContato-form">
+            <fieldset>
+              <legend class="secaoContato-form-legend">
+                Oi, tudo bem? Fale com a gente!
+                Preencha seus dados e sua mensagem:
+              </legend>
 
-            <p class="secaoContato-form-legend">
-              Oi, tudo bem? Fale com a gente!
-              Preencha seus dados e sua mensagem:
-            </p>
+              <div class="contatoCampo contatoCampo--sucesso">
+                <label for="inp_forms-nome">Nome: </label>
+                <input type="text" class="contatoCampo--validouFoi" value="Ex. João da Silva" id="inp_forms-nome" required>
+              </div>  
 
-            <div class="contatoCampo contatoCampo--sucesso">
-              <label for="inp_forms-nome">Nome: </label>
-              <input type="text" class="contatoCampo--validouFoi" value="Ex. João da Silva" id="inp_forms-nome" required>
-            </div>  
+              <div class="contatoCampo contatoCampo--erro">
+                <label for="inp_forms-email">Email: </label>
+                <input type="email" class="contatoCampo--validouErro" id="inp_forms-email" required>
+                <span class="contatoCampo-msg contatoCampo-msg--erro">
+                  Você quis dizer <a href="#">gmail.com?</a>
+                </span>
+              </div>
 
-            <div class="contatoCampo contatoCampo--erro">
-              <label for="inp_forms-email">Email: </label>
-              <input type="email" class="contatoCampo--validouErro" id="inp_forms-email" required>
-              <span class="contatoCampo-msg contatoCampo-msg--erro">
-                Você quis dizer <a href="#">gmail.com?</a>
-              </span>
-            </div>
+              <div class="contatoCampo contatoCampo--erro">
+                <label for="inp_forms-telefone">Telefone: </label>
+                <input type="text" class="contatoCampo--validouErro" id="inp_forms-telefone" placeholder="(11) 5571-2751">
+                <span class="contatoCampo-msg contatoCampo-msg--erro">Faltou o DDD</span>
+              </div>     
 
-            <div class="contatoCampo contatoCampo--erro">
-              <label for="inp_forms-telefone">Telefone: </label>
-              <input type="text" class="contatoCampo--validouErro" id="inp_forms-telefone" placeholder="(11) 5571-2751">
-              <span class="contatoCampo-msg contatoCampo-msg--erro">Faltou o DDD</span>
-            </div>     
+              <div class="contatoCampo">
+                <label for="inp_forms-cep">CEP: </label>
+                <input type="text" maxlength="8" placeholder="Exemplo: 04101-300" id="inp_forms-cep" required>
+              </div>
 
-            <div class="contatoCampo">
-              <label for="inp_forms-cep">CEP: </label>
-              <input type="text" maxlength="8" placeholder="Exemplo: 04101-300" id="inp_forms-cep" required>
-            </div>
+              <div class="contatoCampo">
+                <label for="inp_forms-endereco">Endereço: </label>
+                <input type="text" class="contatoCampo-campoDesabilitado" id="inp_forms-endereco" readonly value="Rua Vergueiro">
+              </div>   
 
-            <div class="contatoCampo">
-              <label for="inp_forms-endereco">Endereço: </label>
-              <input type="text" class="contatoCampo-campoDesabilitado" id="inp_forms-endereco" readonly value="Rua Vergueiro">
-            </div>   
+              <div class="contatoCampo">
+                <label for="inp_forms-bairro">Bairro: </label>
+                <input type="text" class="contatoCampo-campoDesabilitado" id="inp_forms-bairro" readonly value="Vila Mariana">
+              </div>   
 
-            <div class="contatoCampo">
-              <label for="inp_forms-bairro">Bairro: </label>
-              <input type="text" class="contatoCampo-campoDesabilitado" id="inp_forms-bairro" readonly value="Vila Mariana">
-            </div>   
+              <div class="contatoCampo">
+                <label for="inp_forms-cidade">Cidade: </label>
+                <input type="text" class="contatoCampo-campoDesabilitado" id="inp_forms-cidade" readonly value="São Paulo">
+              </div>   
 
-            <div class="contatoCampo">
-              <label for="inp_forms-cidade">Cidade: </label>
-              <input type="text" class="contatoCampo-campoDesabilitado" id="inp_forms-cidade" readonly value="São Paulo">
-            </div>   
+              <div class="contatoCampo">
+                <label for="inp_forms-estado">Estado: </label>
+                <input type="text" class="contatoCampo-campoDesabilitado" id="inp_forms-estado" readonly value="SP">
+              </div>   
 
-            <div class="contatoCampo">
-              <label for="inp_forms-estado">Estado: </label>
-              <input type="text" class="contatoCampo-campoDesabilitado" id="inp_forms-estado" readonly value="SP">
-            </div>   
+              <div class="contatoCampo">
+                <label for="inp_forms-mensagem">Mensagem: </label>
+                <textarea name="" cols="30" rows="10" id="inp_forms-mensagem" required></textarea>
+              </div>
 
-            <div class="contatoCampo">
-              <label for="inp_forms-mensagem">Mensagem: </label>
-              <textarea name="" cols="30" rows="10" id="inp_forms-mensagem" required></textarea>
-            </div>
+              <div class="contatoCampo">
+                <input id="chbx_email" type="checkbox" checked value="receberDestaques" class="contatoCampo-checkbox"> 
+                <label class="contatoCampo-label" for="chbx_email">Receber destaques por email</label>
+              </div>
 
-            <div class="contatoCampo">
-              <input id="chbx_email" type="checkbox" checked value="receberDestaques" class="contatoCampo-checkbox"> 
-              <label class="contatoCampo-label" for="chbx_email">Receber destaques por email</label>
-            </div>
-
-            <div class="contatoCampo">
-              <button class="secaoContato-form-cta btnPadrao" type="submit">
-                Enviar mensagem
-              </button>
-              <span class="contatoCampo-msg contatoCampo-msg--erro secaoContatoForm-validacao">
-                Verifique os erros acima
-              </span>
-            </div>
-
+              <div class="contatoCampo">
+                <button class="secaoContato-form-cta btnPadrao" type="submit">
+                  Enviar mensagem
+                </button>
+                <span class="contatoCampo-msg contatoCampo-msg--erro secaoContatoForm-validacao">
+                  Verifique os erros acima
+                </span>
+              </div>
+            </fieldset>
           </form>
         </div> <!--fim .container da .secaoContato-->
 
