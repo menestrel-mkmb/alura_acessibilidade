@@ -18,20 +18,26 @@ campoEmail.addEventListener('blur', function() {
       suggestionSpan.classList.remove('escondeVisualmente');
       campoEmail.classList.add('contatoCampo--validouErro');
       campoEmail.parentNode.classList.add('contatoCampo--erro');
-      suggestionSpan.textContent = "Você quis dizer " + suggestion.full + "?";
+      suggestionSpan.textContent = "Erro encontrado. Você quis dizer " + suggestion.full + "?";
       suggestionString = suggestion.full;
+      suggestionSpan.setAttribute('tabindex','0');
+      suggestionSpan.focus();
     },
   });
 });
 
 suggestionSpan.addEventListener('click', function(){
-  campoEmail.value = suggestionString;
   validEmail();
+  campoEmail.value = suggestionString;
+  campoEmail.title = 'Correção executada';
+  campoEmail.focus();
 });
 
 function validEmail(){
   if (campoEmail.validity.valid) {
     suggestionSpan.classList.add('escondeVisualmente');
+    suggestionSpan.textContent = '';
+    suggestionSpan.removeAttribute('tabindex');
     campoEmail.classList.remove('contatoCampo--validouErro');
     campoEmail.parentNode.classList.remove('contatoCampo--erro');
   }
