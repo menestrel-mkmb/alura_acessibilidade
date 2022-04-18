@@ -317,23 +317,22 @@
                 Preencha seus dados e sua mensagem:
               </legend>
 
-              <div class="contatoCampo contatoCampo--sucesso">
+              <div class="contatoCampo">
                 <label for="inp_forms-nome">Nome: </label>
-                <input type="text" class="contatoCampo--validouFoi" value="Ex. João da Silva" id="inp_forms-nome" required>
+                <input type="text" placeholder="Ex. João da Silva" id="inp_forms-nome" required>
               </div>  
 
-              <div class="contatoCampo contatoCampo--erro">
+              <div class="contatoCampo">
                 <label for="inp_forms-email">Email: </label>
-                <input type="email" class="contatoCampo--validouErro" id="inp_forms-email" required>
-                <span class="contatoCampo-msg contatoCampo-msg--erro">
-                  Você quis dizer <a href="#">gmail.com?</a>
+                <input type="email" placeholder="exemplo@dominio.com" id="inp_forms-email" required>
+                <span id="suggestion-mailcheck" class="contatoCampo-msg escondeVisualmente">
                 </span>
               </div>
 
-              <div class="contatoCampo contatoCampo--erro">
+              <div class="contatoCampo">
                 <label for="inp_forms-telefone">Telefone: </label>
-                <input type="text" class="contatoCampo--validouErro" id="inp_forms-telefone" placeholder="(11) 5571-2751">
-                <span class="contatoCampo-msg contatoCampo-msg--erro">Faltou o DDD</span>
+                <input type="text" id="inp_forms-telefone" placeholder="(11) 5571-2751">
+                <span class="contatoCampo-msg"></span>
               </div>     
 
               <div class="contatoCampo">
@@ -349,7 +348,7 @@
               <div class="contatoCampo">
                 <label for="inp_forms-bairro">Bairro: </label>
                 <input type="text" class="contatoCampo-campoDesabilitado" id="inp_forms-bairro" readonly value="Vila Mariana">
-              </div>   
+              </div>
 
               <div class="contatoCampo">
                 <label for="inp_forms-cidade">Cidade: </label>
@@ -375,7 +374,7 @@
                 <button class="secaoContato-form-cta btnPadrao" type="submit">
                   Enviar mensagem
                 </button>
-                <span class="contatoCampo-msg contatoCampo-msg--erro secaoContatoForm-validacao">
+                <span class="contatoCampo-msg secaoContatoForm-validacao escondeVisualmente">
                   Verifique os erros acima
                 </span>
               </div>
@@ -474,5 +473,8 @@
   <script src="js/carousel.js"></script>
   <script src="js/inert.js"></script>
   <script src="js/dialog.js"></script>
+  <script src="js/mailcheck.js"></script>
+  <script src="js/mailcheck-config.js"></script>
+  <script src="js/form.js"></script>
 </body>
 </html>
