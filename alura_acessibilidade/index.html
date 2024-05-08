@@ -7,6 +7,7 @@
 
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/tema-padrao.css">
+  <link rel="stylesheet" href="css/filtro.css">
   <link rel="stylesheet" href="css/secaoDestaque.css">
   <link rel="stylesheet" href="css/cabecalho.css">
   <link rel="stylesheet" href="css/diferenciais.css">
@@ -28,7 +29,7 @@
     <a href="#conteudoPrincipal" class="pularNavegacao">Pular para conteúdo principal</a>
 
     <header class="cabecalho container">
-      <a href="#" class="cabecalho-logo">
+      <a href="#home" class="cabecalho-logo">
         <svg width="205" height="59" viewBox="0 0 205 59" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
           <title>Logo da Apeperia</title>
           <!-- <desc>Created using Figma</desc> -->
@@ -61,7 +62,10 @@
           <li class="cabecalho-nav-item"><a href="#features">Destaques</a></li>
           <li class="cabecalho-nav-item"><a href="#institution">Institucional</a></li>
           <li class="cabecalho-nav-item"><a href="#contact">Contato</a></li>
-        </ul>  
+        </ul>
+        <ul>
+          <li class="cta-nav-item"><button id="btn_filter">Filter</button></li>
+        </ul>
       </nav>
     </header>
 
@@ -195,7 +199,6 @@
 
         </div> <!--fim .container da .secaoPlanos-->
       </section> <!--fim .secaoPlanos-->
-
 
       <section class="secaoBlog container" id="blog">
         <h2 class="secaoBlog-titulo tituloPadrao">
@@ -476,5 +479,6 @@
   <script src="js/mailcheck.js"></script>
   <script src="js/mailcheck-config.js"></script>
   <script src="js/form.js"></script>
+  <script src="js/filter.js"></script>
 </body>
 </html>
