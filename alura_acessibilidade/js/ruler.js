@@ -29,6 +29,9 @@ function followCursorHorizontal (e) {
     rulerBefore.classList.add('ruler-dark');
     ruler.classList.add('ruler-light');
     rulerAfter.classList.add('ruler-dark');
+
+    const lineHeight = window.getComputedStyle(body).lineHeight;
+    ruler.style.height = typeof(lineHeight) === 'number' ? (lineHeight + 'px') : (5 + '%');
     
     rulerBtn.addEventListener('click', function() {
         rulerSection.classList.toggle('ruler-focus');
