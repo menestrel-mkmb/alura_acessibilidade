@@ -28,6 +28,9 @@
 
 .cabecalho-nav {
   text-align: center;
+  
+  display: flex;
+  gap: 1rem;
 }
 
 .cabecalho-nav-item {
@@ -47,6 +50,22 @@
 .cabecalho-nav-item a:hover,
 .cabecalho-nav-item a:focus {
   text-decoration: underline;
+}
+
+.cta-nav-item button {
+  border: 2px solid #fff;
+  border-radius: 4px;
+  background-color: transparent;
+  color: #fff;
+
+  padding: .5em 1em;
+}
+
+.cta-nav-item button:hover {
+  background-color: #fff;
+  color: #000;
+
+  cursor: pointer;
 }
 
 @media (min-width: 830px) {
