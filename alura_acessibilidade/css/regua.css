@@ -1,0 +1,30 @@
+.ruler__sect {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+
+    display: flex;
+
+    z-index: 9999;
+
+    height: 100vh;
+    
+    pointer-events: none;
+    visibility: hidden;
+}
+
+.ruler-light {
+    height: 10%;
+    width: 5%;
+}
+
+.ruler-dark {
+    display: block;
+    background: rgba(0, 0, 0, .7);
+}
+
+.ruler-focus {
+    visibility: visible;
+}
