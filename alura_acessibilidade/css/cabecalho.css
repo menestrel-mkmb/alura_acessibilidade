@@ -26,10 +26,13 @@
 }
 
 
-.cabecalho-nav {
+.cabecalho-nav,
+.cabecalho-nav ul {
   text-align: center;
   
   display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
   gap: 1rem;
 }
 
